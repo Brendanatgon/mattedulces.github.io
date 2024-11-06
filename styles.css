@@ -1,0 +1,507 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif; /* Cambia la fuente general si es necesario */
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 10px; /* Reduciendo el margen izquierdo de la pantalla */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;  /* Elimina el padding para asegurarte de que ocupe todo el ancho */
+    background-color: rgba(219, 102, 25, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0; /* Asegura que esté alineado al lado izquierdo de la pantalla */
+    right: 0; /* Asegura que esté alineado al lado derecho de la pantalla */
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    padding-left: 10px; /* Ajusta el valor según el espacio deseado para el logo */
+    margin-left: 45px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 55px; /* Ajusta este valor para mover los botones hacia la izquierda */
+    
+}
+
+nav a {
+    padding: 8px 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+   
+}
+
+nav a:hover {
+    color: #7c72cf;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 130px);
+    margin-top: 12px;
+    margin-bottom: 60px;
+    z-index: 1;
+    padding: 0;
+    border-radius: 5px; /* Ajusta el valor según el redondeo deseado */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    34% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+    67% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+h2 {
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 60px 0;
+    background-color: #ffffff;
+    padding-top: 140px; /* Asegúrate de que las secciones posteriores no se superpongan con el header */
+}
+#quienes-somos {
+    padding: 100px 20px;
+    padding-left: 20px;  /* Ajusta el margen izquierdo reduciéndolo más */
+    margin: 60px 0;  /* Ajusta el margen si es necesario */
+}
+
+
+#quienes-somos h2 {
+    color: #7c72cf;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.quienes-somos-container {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.quienes-somos-text {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.quienes-somos-img {
+    flex: 1;
+    max-width: 550px;
+    margin-top: 20px;
+}
+
+.quienes-somos-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+#productos {
+    padding-left: 30px;  /* Mantén el margen izquierdo */
+    padding-right: 15px; /* Mantén el margen derecho reducido */
+    margin-top: 0; /* Elimina el margen-top para evitar solapamientos */
+    padding-top: 130px; /* Asegura que la sección comience por debajo del header */
+    margin-bottom: 70px;  /* Mantén un espacio inferior */
+}
+
+#productos h2 {
+    color: #7c72cf;
+    font-size: 23px;
+    margin-bottom: 30px;  /* Asegúrate de que el título tenga suficiente espacio abajo */
+    margin-top: 20px;  /* Si es necesario, agrega un margen superior */
+}
+
+
+.products-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin-top: 30px;
+    padding-left: 0;  /* Asegúrate de que no haya padding izquierdo */
+}
+
+.product-item {
+    flex: 0 0 calc(25% - 22px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    color: rgba(219, 102, 25, 0.8);
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.product-item p {
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.products-container img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+#contacto h2 {
+    margin-bottom: 15px;
+    color: #7c72cf;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contacto-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contacto-info p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-info i {
+    margin-right: 10px;
+    color: #d75c2a;
+    font-size: 20px;
+}
+
+.contacto-info a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contacto-info a:hover {
+    text-decoration: underline;
+}
+
+.mapa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    padding: 10px 20px;
+    min-height: 50px;
+    text-align: center;
+    background-color: #7c72cf;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-left: 0; /* Cambia esto a 0 para eliminar el margen derecho y mover los botones a la izquierda */
+    margin-right: 65px; /* Puedes ajustar o eliminar este valor según sea necesario */
+}
+
+
+nav a {
+    padding: 8px 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7c72cf;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 130px);
+    margin-top: 12px;
+    margin-bottom: 60px;
+    z-index: 1;
+    padding: 0;
+    border-radius: 5px; /* Ajusta el valor según el redondeo deseado */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    34% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+    67% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+h2 {
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 60px 0;
+    background-color: #ffffff;
+}
+
+#quienes-somos {
+    padding: 100px 20px;
+    padding-left: 15px;
+    margin: 60px 0; /* Ajusta el margen para igualarlo al de otras secciones */
+    margin-right: 10px;
+}
+
+#quienes-somos h2 {
+    color: #7c72cf;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.quienes-somos-container {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.quienes-somos-text {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.quienes-somos-img {
+    flex: 1;
+    max-width: 550px;
+    margin-top: 20px;
+}
+
+.quienes-somos-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#productos {
+    padding-left: 30px;  /* Aumenta el margen izquierdo para alinear con 'Quiénes somos' */
+    padding-right: 15px; /* Mantén el margen derecho reducido */
+    margin: 70px 0;
+}
+
+#productos h2 {
+    color: #7c72cf;
+    font-size: 23px;
+    margin-bottom: 30px;
+    margin-left: -3px;  /* Ajusta el valor para mover el título hacia la izquierda */
+}
+
+.products-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin-top: 30px;
+    padding-left: 0;  /* Asegúrate de que no haya padding izquierdo */
+}
+
+.product-item {
+    flex: 0 0 calc(25% - 22px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    color: rgba(219, 102, 25, 0.8);
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.product-item p {
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.products-container img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+#contacto h2 {
+    margin-bottom: 15px;
+    color: #7c72cf;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contacto-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contacto-info p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-info i {
+    margin-right: 10px;
+    color: #d75c2a;
+    font-size: 20px;
+}
+
+.contacto-info a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contacto-info a:hover {
+    text-decoration: underline;
+}
+
+.mapa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    padding: 10px 20px;
+    min-height: 50px;
+    text-align: center;
+    background-color: #7c72cf;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
